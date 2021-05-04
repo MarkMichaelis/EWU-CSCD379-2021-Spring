@@ -7,8 +7,11 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
 
+  build:
+    defaults:
+      run:
+        working-directory: ./SecretSanta/
     runs-on: ubuntu-latest
 
     steps:
