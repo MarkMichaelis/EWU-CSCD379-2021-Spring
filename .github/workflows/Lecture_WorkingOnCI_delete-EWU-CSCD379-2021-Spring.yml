@@ -11,6 +11,9 @@ on:
 
 jobs:
   build:
+    defaults:
+      run:
+        working-directory: ./UserGroup/
     runs-on: windows-latest
 
     steps:
