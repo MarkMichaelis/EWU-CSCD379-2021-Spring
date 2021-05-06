@@ -7,7 +7,6 @@ on:
     branches: [ Lecture* ]
 
 jobs:
-
   build:
     defaults:
       run:
@@ -20,10 +19,8 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 5.0.x
-    - name: where are we
+    - name: Get Directory
       run: pwd
-    - name: list some key files
-      run: ls -lrt        
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
