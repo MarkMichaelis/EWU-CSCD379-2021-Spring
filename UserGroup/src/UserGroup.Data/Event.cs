@@ -16,6 +16,6 @@ namespace UserGroup.Data
         [NotMapped]
         public string[]? UserGroupSpeakers { get; set; }
 
-
+        public ICollection<Speaker> Speakers { get; set; }
     }
 }
