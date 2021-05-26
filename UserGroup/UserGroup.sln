@@ -31,6 +31,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserGroup.E2E", "test\UserG
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserGroup.Business.Tests", "test\UserGroup.Business.Tests\UserGroup.Business.Tests.csproj", "{DF34F4AD-570C-4E16-B442-508ED57E57FE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserGroup.E2E", "test\UserGroup.E2E\UserGroup.E2E.csproj", "{190B0AE8-2CB9-41B6-9B2D-6AB40C00B3BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserGroup.Business.Tests", "test\UserGroup.Business.Tests\UserGroup.Business.Tests.csproj", "{DF34F4AD-570C-4E16-B442-508ED57E57FE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
