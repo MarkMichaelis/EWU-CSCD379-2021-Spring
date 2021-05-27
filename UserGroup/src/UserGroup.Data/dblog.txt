@@ -1,8 +1,0 @@
-info: 5/25/2021 17:07:23.565 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
-      Entity Framework Core 5.0.6 initialized 'DbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
-dbug: 5/25/2021 17:07:23.708 CoreEventId.DetectChangesStarting[10800] (Microsoft.EntityFrameworkCore.ChangeTracking) 
-      DetectChanges starting for 'DbContext'.
-dbug: 5/25/2021 17:07:23.711 CoreEventId.DetectChangesCompleted[10801] (Microsoft.EntityFrameworkCore.ChangeTracking) 
-      DetectChanges completed for 'DbContext'.
-dbug: 5/25/2021 17:07:23.806 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
-      'DbContext' disposed.
