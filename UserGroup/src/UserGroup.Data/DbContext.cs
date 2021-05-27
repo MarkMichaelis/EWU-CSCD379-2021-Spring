@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using DbContext = UserGroup.Data.DbContext;
 
 namespace UserGroup.Data
@@ -18,7 +19,9 @@ namespace UserGroup.Data
         public DbSet<Event> Events => Set<Event>();
         public DbSet<Speaker> Speakers => Set<Speaker>();
 
-        private StreamWriter LogStream { get; } = new StreamWriter("dblog.txt", append: true);
+        #region Logging
+        public static ILoggerFactory LoggerFactory { get; }
+            = Microsoft.Extensions.Logging.LoggerFactory.Create(logBuilder=> logBuilder.AddConsole());
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -27,21 +30,9 @@ namespace UserGroup.Data
                 throw new ArgumentNullException(nameof(optionsBuilder));
             }
 
-            optionsBuilder.LogTo(LogStream.WriteLine);
+            optionsBuilder.UseLoggerFactory(LoggerFactory);
         }
-
-        public override void Dispose()
-        {
-            base.Dispose();
-            LogStream.Dispose();
-            GC.SuppressFinalize(this);
-        }
-
-        public override async ValueTask DisposeAsync()
-        {
-            await base.DisposeAsync();
-            await LogStream.DisposeAsync();
-        }
+        #endregion // Logging
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

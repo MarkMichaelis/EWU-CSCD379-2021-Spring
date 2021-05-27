@@ -12,7 +12,7 @@ namespace UserGroup.Data.Tests
         {
             using DbContext dbContext = new DbContext();
             int countBefore = dbContext.Events.Count();
-            dbContext.Events.Add(new Event() { Name = "Inigo Montoya" + Guid.NewGuid().ToString() });
+            dbContext.Events.Add(new Event() { Title = "Inigo Montoya" + Guid.NewGuid().ToString() });
             dbContext.SaveChanges();
             Assert.AreEqual(countBefore + 1, dbContext.Events.Count());
         }
