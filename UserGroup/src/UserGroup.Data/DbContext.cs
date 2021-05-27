@@ -19,30 +19,5 @@ namespace UserGroup.Data
         public DbSet<Event> Events => Set<Event>();
         public DbSet<Speaker> Speakers => Set<Speaker>();
 
-        #region Logging
-        public static ILoggerFactory LoggerFactory { get; }
-            = Microsoft.Extensions.Logging.LoggerFactory.Create(logBuilder=> logBuilder.AddConsole());
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (optionsBuilder is null)
-            {
-                throw new ArgumentNullException(nameof(optionsBuilder));
-            }
-
-            optionsBuilder.UseLoggerFactory(LoggerFactory);
-        }
-        #endregion // Logging
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            if (modelBuilder is null)
-            {
-                throw new ArgumentNullException(nameof(modelBuilder));
-            }
-
-            modelBuilder.Entity<Speaker>()
-                .HasAlternateKey(speaker => new { speaker.FirstName, speaker.LastName });
-        }
     }
 }
