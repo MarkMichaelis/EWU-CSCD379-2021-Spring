@@ -63,5 +63,15 @@ namespace UserGroup.Web.Tests.Api
         {
             throw new System.NotImplementedException();
         }
+
+        public Task RemoveSpeakerAsync(int id, int speakerId)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Task RemoveSpeakerAsync(int id, int speakerId, CancellationToken cancellationToken)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

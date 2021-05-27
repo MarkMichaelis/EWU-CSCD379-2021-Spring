@@ -42,7 +42,7 @@ namespace UserGroup.Api.Tests.Controllers
         public void Get_WithData_ReturnsEvents()
         {
             //Arrange
-            EventsController controller = new(new EventManager());
+            EventsController controller = new(new EventManager(new Random()));
 
             //Act
             IEnumerable<Event> events = controller.Get();

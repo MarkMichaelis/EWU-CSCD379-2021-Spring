@@ -34,5 +34,10 @@ namespace UserGroup.Api.Tests.Business
         {
             SavedEvent = item;
         }
+
+        public RemoveSpeakerResult RemoveSpeaker(int eventId, int speakerId)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
