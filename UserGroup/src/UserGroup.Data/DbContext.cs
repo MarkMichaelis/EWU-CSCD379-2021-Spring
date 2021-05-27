@@ -51,7 +51,7 @@ namespace UserGroup.Data
             }
 
             modelBuilder.Entity<Speaker>()
-                .HasAlternateKey(speaker => new { speaker.Name });
+                .HasAlternateKey(speaker => new { speaker.FirstName, speaker.LastName });
         }
     }
 }
